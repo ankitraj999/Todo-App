@@ -21,6 +21,10 @@ export class ListComponent implements OnInit {
       this.taskService.getTask().subscribe(data=>
         {this.taskfile = data;
       });
+    }else if(localStorage.getItem("addnew")!=null){  //fetching from local strorage 
+      this.taskService.getTask().subscribe(data=>
+        {this.taskfile = data;
+      });
     }
     else{
       this.router.navigate(['/login']);
