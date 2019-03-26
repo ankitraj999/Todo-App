@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     for(let i=0;i<this.userarray.length;i++){
       if(username==this.userarray[i].email && password==this.userarray[i].password)
         {
-      
+          localStorage.setItem("addnew",username)
           flag=1
           break;
         }
