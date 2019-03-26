@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['list']);
     }
     else if(flag){
-      alert(flag)
+      //alert(flag)
       this.router.navigate(['list']);
     }
     else {
