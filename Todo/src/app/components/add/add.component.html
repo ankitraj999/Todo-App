@@ -1,0 +1,73 @@
+
+
+  <div class="col-md-6 col-md-offset-2">
+    <h3>Add User</h3>
+    <br />
+  
+    <!-- Designing Login Form-->
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit2()">
+      <div class="form-group">
+  
+        <label for="task">Task Title : </label>
+        <input type="text" class="form-control" formControlName="task" 
+        id="task" />
+  
+        <div *ngIf="submitted && addForm.controls.taskl.errors" class="error">
+          <div class="text-danger" *ngIf="addForm.controls.task.errors.required">
+            Task is required ..
+          </div>
+        </div>
+        <br/>
+  
+  
+        <label for="date">Date: </label>
+        <input type="date" class="form-control" formControlName="date" />
+  
+        <div *ngIf="submitted && addForm.controls.date.errors" class="error">
+        <div class="text-danger" *ngIf="loginForm.controls.date.errors.required">
+            Date is required ..
+        </div>
+        </div>
+        <br/>
+  
+  
+        <label for="status">Completion Status: </label>
+        <input type="text" class="form-control" formControlName="status" />
+  
+        <div *ngIf="submitted && addForm.controls.status.errors" class="error">
+        <div class="text-danger" *ngIf="loginForm.controls.status.errors.required">
+            Completion status is required ..
+        </div>
+        </div>
+        <br/>
+  
+  
+        <label for="action">Action Description: </label>
+        <input type="text" class="form-control" formControlName="action" />
+  
+        <div *ngIf="submitted && addForm.controls.action.errors" class="error">
+        <div class="text-danger" *ngIf="loginForm.controls.action.errors.required">
+            Action description is required ..
+        </div>
+        </div>
+  
+      </div>
+      <br/>
+      <button class="btn btn-success">Add</button> &nbsp;
+  
+      <button class="btn btn-danger" type="reset">Cancel</button>&nbsp;
+  
+      <a class="btn btn-warning" [routerLink]="['/home']">
+        GotoHome</a> <br /><br />
+  
+      <div *ngIf="invalidLogin" class="error">
+        <div class="text-danger">
+          Invalid credentials ..
+        </div>
+      </div>
+  
+    </form>
+  
+  </div>
+  
+  

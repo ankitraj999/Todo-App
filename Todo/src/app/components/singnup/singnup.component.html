@@ -1,0 +1,70 @@
+
+  <div class="col-md-6 col-md-offset-2">
+    <h3>Sing Up</h3>
+    <br/>
+    
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit1()">
+
+      <div class="form-group">
+        <label for="email">First Name: </label>
+        <input type="email" class="form-control" formControlName="firstname" 
+        id="fName" />
+        <div *ngIf="submitted && signupForm.controls.firstName.errors" class="error">
+          <div class="text-danger" *ngIf="signupForm.controls.firstName.errors.required">
+            FirstName is required ..
+          </div>
+        </div>
+
+
+        <label for="lastName">Last Name:  </label>
+        <input type="text" class="form-control" formControlName="lastname" 
+        id="lName"/>
+        <div *ngIf="submitted && signupForm.controls.lastName.errors" class="error">
+          <div class="text-danger" *ngIf="signupForm.controls.lastName.errors.required">
+            LastName is required ..
+          </div>
+        </div>
+
+
+        <label for="email">Email:  </label>
+        <input type="email" class="form-control" formControlName="email" 
+        id="txtEmail"/>
+        <div *ngIf="submitted && signupForm.controls.email.errors" class="error">
+          <div class="text-danger" *ngIf="signupForm.controls.email.errors.required">
+            Email is required ..
+          </div>
+        </div>
+
+        <label for="email">Password:  </label>
+        <input type="password" class="form-control" formControlName="password" 
+        id="txtEmail"/>
+        <div *ngIf="submitted && signupForm.controls.password.errors" class="error">
+          <div class="text-danger" *ngIf="signupForm.controls.password.errors.required">
+            password is required ..
+          </div>
+        </div>
+      </div>
+    
+
+
+   
+
+
+  
+      <button class="btn btn-success">Sign Up</button> &nbsp;
+
+      <button class="btn btn-danger" type="reset">Cancel</button>&nbsp;
+
+      <a class="btn btn-warning" [routerLink]="['/list-user']">
+        BackToList</a> <br /><br />
+
+      <div *ngIf="invalidLogin" class="error">
+        <div class="text-danger">
+          Invalid credentials ..
+        </div>
+      </div>
+
+    </form>
+
+  </div>

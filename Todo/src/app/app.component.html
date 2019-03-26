@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+<app-navbar></app-navbar>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="col-md-4">
+        <br/>
+        <img src='../assets/1.png'/>
+      </div>
+    </div>
+    <br/><br/>
+  </div>
+  
+  <footer>
+    <div class="row">
+      <div class="col-md-8">
+        <span class="text-danger">
+          <strong class="col-md-9">
+            This site is copyright &copy; to Ankit.
+            All rights are reserved here.
+          </strong>
+        </span>
+      </div>
+      <div class="col-md-3">
+        <span class="text-primary text-right">
+          <strong>{{todaysDate | date: 'dd-MM-yyyy'}}</strong>
+        </span>
+      </div>
+    </div>
+  </footer>
+  
+  
+
